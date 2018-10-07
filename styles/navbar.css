@@ -1,0 +1,34 @@
+/* navbar */
+.navbar-default {
+  background-color: #D9EDEB;
+  border-color: #D9EDEB;
+}
+
+.right-buffer {
+  margin-right: 10px;
+}
+
+.navbar-default .navbar-nav > li > a {
+  Font: GeosansLight
+  Size: 18pt
+  Letter Spacing: 1.5px
+  Text stroke: 0.9px
+  Color: #808080
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  Font: GeosansLight
+  Size: 18pt
+  Letter Spacing: 1.5px
+  Text stroke: 0.9px
+  Color: black
+}
+
+#logo_image
+{
+    position: relative;
+    width: 170px;
+    left: 15px;
+    max-height: 70px; /* height of the navbar */
+}
