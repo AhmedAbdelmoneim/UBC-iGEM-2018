@@ -1,3 +1,11 @@
+#logo_image
+{
+  position: relative;
+  width: 170px;
+  left: 15px;
+  max-height: 70px;
+}
+
 /* navbar */
 .navbar-default {
   background-color: #D9EDEB;
@@ -9,26 +17,43 @@
 }
 
 .navbar-default .navbar-nav > li > a {
-  Font: GeosansLight
-  Size: 18pt
-  Letter Spacing: 1.5px
-  Text stroke: 0.9px
-  Color: #808080
+  font: GeosansLight;
+  size: 18pt;
+  letter-spacing: 1.5px;
+  text-stroke: 0.9px;
+  color: #808080;
 }
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  Font: GeosansLight
-  Size: 18pt
-  Letter Spacing: 1.5px
-  Text stroke: 0.9px
-  Color: black
+  font: GeosansLight;
+  size: 18px;
+  letter-spacing: 1.5px;
+  -webkit-text-stroke: 0.4px;
+  color: black;
+  background-color: #C4DFDD;
 }
 
-#logo_image
-{
-    position: relative;
-    width: 170px;
-    left: 15px;
-    max-height: 70px; /* height of the navbar */
+.navbar-default .navbar-nav .dropdown-menu {
+  font: GeosansLight;
+  background-color: #45827A;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  width: 160px;
+  font-weight: normal;
+  padding: 6px 0px;
+}
+
+.navbar-default .navbar-nav .dropdown-menu>li > a {
+  color: white;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.navbar-default .navbar-nav .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav .dropdown-menu > li > a:focus {
+  background-color: #22645B;
+  -webkit-text-stroke: 0.3px;
 }
