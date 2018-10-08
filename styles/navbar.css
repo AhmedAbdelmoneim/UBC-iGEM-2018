@@ -1,0 +1,59 @@
+#logo_image
+{
+  position: relative;
+  width: 170px;
+  left: 15px;
+  max-height: 70px;
+}
+
+/* navbar */
+.navbar-default {
+  background-color: #D9EDEB;
+  border-color: #D9EDEB;
+}
+
+.right-buffer {
+  margin-right: 10px;
+}
+
+.navbar-default .navbar-nav > li > a {
+  font: GeosansLight;
+  size: 18pt;
+  letter-spacing: 1.5px;
+  text-stroke: 0.9px;
+  color: #808080;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  font: GeosansLight;
+  size: 18px;
+  letter-spacing: 1.5px;
+  -webkit-text-stroke: 0.4px;
+  color: black;
+  background-color: #C4DFDD;
+}
+
+.navbar-default .navbar-nav .dropdown-menu {
+  font: GeosansLight;
+  background-color: #45827A;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  width: 160px;
+  font-weight: normal;
+  padding: 6px 0px;
+}
+
+.navbar-default .navbar-nav .dropdown-menu>li > a {
+  color: white;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.navbar-default .navbar-nav .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav .dropdown-menu > li > a:focus {
+  background-color: #22645B;
+  -webkit-text-stroke: 0.3px;
+}
