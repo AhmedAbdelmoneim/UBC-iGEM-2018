@@ -7,6 +7,10 @@
 }
 
 /* navbar */
+.navbar {
+  margin-bottom: 0;
+}
+
 .navbar-default {
   background-color: #D9EDEB;
   border-color: #D9EDEB;
@@ -28,7 +32,7 @@
 .navbar-default .navbar-nav > li > a:focus {
   font: GeosansLight;
   size: 18px;
-  letter-spacing: 1.5px;
+  letter-spacing: 0.5px;
   -webkit-text-stroke: 0.4px;
   color: black;
   background-color: #C4DFDD;
@@ -38,12 +42,12 @@
   font: GeosansLight;
   background-color: #45827A;
   color: white;
-  font-size: 12px;
-  letter-spacing: 1px;
+  font-size: 13px;
+  letter-spacing: 0.4px;
   text-decoration: none;
   width: 160px;
   font-weight: normal;
-  padding: 6px 0px;
+  padding: 2px 0px;
 }
 
 .navbar-default .navbar-nav .dropdown-menu>li > a {
