@@ -1,0 +1,2 @@
+1) bootstrap 3.3.4 (css and js)
+2) jquery 3.3.1
