@@ -12,9 +12,14 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- jQuery Custom Scroller CDN --> <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
   <!-- external styelsheet -->
-  <!-- <link rel="stylesheet" href="styles/navbar.css"> -->
+  <link rel="stylesheet" href="styles/sidebar.css">
+  <link rel="stylesheet" href="styles/navbar.css">
+  <!-- Scrollbar Custom CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
 
   <style>
 
@@ -39,14 +44,14 @@
     font-size: 12pt;
   }
 
-  img {
+  .interview-image {
     width:281px;
     height:281px;
     border: 2px solid #4e8781;
     border-radius: 50%;
   }
 
-  img:hover {
+  .interview-image:hover {
     border: 2px solid #f4c9c2;
   }
 
@@ -56,52 +61,179 @@
 
   </style>
 
+  <script>
+  $(document).ready(function () {
+    $("#sidebar").mCustomScrollbar({
+      theme: "minimal"
+    });
+
+    $('#sidebarCollapse').on('click', function () {
+      // open or close navbar
+      $('#sidebar').toggleClass('active');
+      // close dropdowns
+      $('.collapse.in').toggleClass('in');
+      // and also adjust aria-expanded attributes we use for the open/closed arrows
+      // in our CSS
+      $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+    });
+
+  });
+  </script>
 </head>
 <body>
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#"><img id="logo_image" src="assets/logo.png"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <div class="container container-fluid">
-    <div class = "row">
-      <h1>HUMAN PRACTICES SILVER</h1>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto right-buffer">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            PROJECT
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">MENU ITEM</a>
+            <a class="dropdown-item" href="#">MENU ITEM</a>
+            <a class="dropdown-item" href="#">MENU ITEM</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">MODEL</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            HUMAN PRACTICES
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">MENU ITEM</a>
+            <a class="dropdown-item" href="#">MENU ITEM</a>
+            <a class="dropdown-item" href="#">MENU ITEM</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            TEAM
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">MENU ITEM</a>
+            <a class="dropdown-item" href="#">MENU ITEM</a>
+            <a class="dropdown-item" href="#">MENU ITEM</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            NOTEBOOK
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">MENU ITEM</a>
+            <a class="dropdown-item" href="#">MENU ITEM</a>
+            <a class="dropdown-item" href="#">MENU ITEM</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">ACHIEVEMENTS</a>
+        </li>
+      </ul>
     </div>
-    <div class = "row">
-      <h2>OVERVIEW</h2>
-    </div>
-    <div class = "row">
-      <p>
-        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
-      </p>
-    </div>
+  </nav>
 
-    <div class="row">
-      <h2>INTERVIEWS</h2>
-    </div>
+  <div class="wrapper">
+    <!-- sidebar -->
+    <nav id="sidebar">
+      <div class="sidebar-header">
+        <h3>SideBar</h3>
+      </div>
 
-    <div class="row">
-      <div class="col-md">
-        <img src="assets/test.jpeg">
-      </div>
-      <div class="col-md">
-        <img src="assets/test.jpeg">
-      </div>
-      <div class="col-md">
-        <img src="assets/test.jpeg">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md">
-        <img src="assets/test.jpeg">
-      </div>
-      <div class="col-md">
-        <img src="assets/test.jpeg">
-      </div>
-      <div class="col-md">
-        <img src="assets/test.jpeg">
+      <ul class="list-unstyled components">
+        <h4>OVERVIEW</h4>
+        <li class="active">
+          <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">INTERVIEWS</a>
+          <ul class="collapse list-unstyled" id="homeSubmenu">
+            <li>
+              <a href="#">DR. -----</a>
+            </li>
+            <li>
+              <a href="#">DR. -----</a>
+            </li>
+            <li>
+              <a href="#">DR. -----</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+          <ul class="collapse list-unstyled" id="pageSubmenu">
+            <li>
+              <a href="#">Page 1</a>
+            </li>
+            <li>
+              <a href="#">Page 2</a>
+            </li>
+            <li>
+              <a href="#">Page 3</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Portfolio</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+
+    </nav>
+
+    <!-- page content -->
+    <div id="content">
+      <div class="container">
+        <div class = "row">
+          <h1>HUMAN PRACTICES SILVER</h1>
+        </div>
+        <div class = "row">
+          <h2>OVERVIEW</h2>
+        </div>
+        <div class = "row">
+          <p>
+            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+          </p>
+        </div>
+
+        <div class="row">
+          <h2>INTERVIEWS</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-md">
+            <img class="interview-image" src="assets/test.jpeg">
+          </div>
+          <div class="col-md">
+            <img class="interview-image" src="assets/test.jpeg">
+          </div>
+          <div class="col-md">
+            <img class="interview-image" src="assets/test.jpeg">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md">
+            <img class="interview-image" src="assets/test.jpeg">
+          </div>
+          <div class="col-md">
+            <img class="interview-image" src="assets/test.jpeg">
+          </div>
+          <div class="col-md">
+            <img class="interview-image" src="assets/test.jpeg">
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
-
-</div>
 
 </body>
 </html>
